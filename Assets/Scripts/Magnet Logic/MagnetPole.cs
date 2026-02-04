@@ -8,18 +8,25 @@ public class MagnetPole : MonoBehaviour
 
     [Header("Configuration Variables")]
     [SerializeField] bool isNorth;
-    [SerializeField] float power;
+    [SerializeField] float power = 2f;
+    [SerializeField] float fieldRadius = 0.5f;
 
     //[Header("State")]
     #endregion
 
     Rigidbody rb;
-
+    SphereCollider sc;
     void Start()
     {
-        rb = GetComponent<Rigidbody>();    
+        rb = GetComponent<Rigidbody>();
+        sc = GetComponent<SphereCollider>();
+        
     }
-
+    private void OnValidate()
+    {
+        sc = GetComponent<SphereCollider>();
+        sc.radius = fieldRadius;
+    }
     private void OnTriggerStay(Collider collision)
     {
 
