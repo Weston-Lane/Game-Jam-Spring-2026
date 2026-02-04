@@ -478,6 +478,8 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
+  MasterBanks:
+  - Master
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
@@ -491,6 +493,7 @@ MonoBehaviour:
   SharedLibraryUpdateStage: 0
   SharedLibraryTimeSinceStart: 0
   CurrentVersion: 131858
+  HideSetupWizard: 1
   HideSetupWizard: 1
   LastEventReferenceScanVersion: 131858
   Platforms:
