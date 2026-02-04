@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6947930283576171330}
   - component: {fileID: 6513817395089978551}
   - component: {fileID: 4538353584253014684}
-  - component: {fileID: 5892074862311108829}
   m_Layer: 0
   m_Name: Magnet N
   m_TagString: Untagged
@@ -28,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 573119872933854494}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2, y: 0.15, z: 0}
+  m_LocalPosition: {x: -0.2, y: 0.105, z: 0}
   m_LocalScale: {x: 0.4, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -91,27 +90,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5892074862311108829
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573119872933854494}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1840289687380527284
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +99,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3406159328340236994}
+  - component: {fileID: 3630552910752368216}
   - component: {fileID: 3670645175600495070}
+  - component: {fileID: 794621176408663004}
   m_Layer: 0
   m_Name: Bar Magnet
   m_TagString: Untagged
@@ -148,6 +128,23 @@ Transform:
   - {fileID: 6509873177319847294}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3630552910752368216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840289687380527284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca21cd73a447bd499f387a965849555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BarMagnet
+  poles:
+  - {fileID: 7317462908048074909}
+  - {fileID: 6509873177319847294}
+  polePower: 1
+  poleFlieldRadius: 0.5
 --- !u!54 &3670645175600495070
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -156,7 +153,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840289687380527284}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -175,6 +172,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &794621176408663004
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840289687380527284}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.79561144, y: 0.19947655, z: 0.20442113}
+  m_Center: {x: -0.0010988414, y: 0.103017695, z: -0.0000024586916}
 --- !u!1 &4888080969188153386
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +204,6 @@ GameObject:
   - component: {fileID: 4479861065688756199}
   - component: {fileID: 855517583891086892}
   - component: {fileID: 6154834679113467098}
-  - component: {fileID: 1961884802126565952}
   m_Layer: 0
   m_Name: Magnet S
   m_TagString: Untagged
@@ -203,7 +220,7 @@ Transform:
   m_GameObject: {fileID: 4888080969188153386}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 0.15, z: 0}
+  m_LocalPosition: {x: 0.2, y: 0.105, z: 0}
   m_LocalScale: {x: 0.4, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -266,27 +283,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1961884802126565952
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4888080969188153386}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5151055558503256860
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +312,7 @@ Transform:
   m_GameObject: {fileID: 5151055558503256860}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 0.15, z: 0}
+  m_LocalPosition: {x: -0.246, y: 0.105, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -334,8 +330,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553f9182387958b46bd4e200e6c17f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagnetPole
+  PoleRb: {fileID: 3670645175600495070}
+  neighborPoles:
+  - {fileID: 6509873177319847294}
   isNorth: 1
   power: 1
+  fieldRadius: 0.5
 --- !u!54 &4824982102174042636
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -429,7 +429,7 @@ Transform:
   m_GameObject: {fileID: 7879629844065408156}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0.15, z: 0}
+  m_LocalPosition: {x: 0.212, y: 0.105, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -447,8 +447,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553f9182387958b46bd4e200e6c17f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagnetPole
+  PoleRb: {fileID: 3670645175600495070}
+  neighborPoles:
+  - {fileID: 7317462908048074909}
   isNorth: 0
   power: 1
+  fieldRadius: 0.5
 --- !u!54 &4959945120136040268
 Rigidbody:
   m_ObjectHideFlags: 0
