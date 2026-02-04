@@ -6,6 +6,7 @@ public class MagnetPole : MonoBehaviour
 {
     #region Inspector Objects
     [Header("Object References")]
+    [SerializeField] Rigidbody PoleRb;
     [SerializeField] Transform[] neighborPoles;
 
     [Header("Configuration Variables")]
@@ -16,14 +17,13 @@ public class MagnetPole : MonoBehaviour
     //[Header("State")]
     #endregion
 
-    Rigidbody rb;
     SphereCollider sc;
 
     public void SetFieldRadius(float radius) => GetComponent<SphereCollider>().radius = radius;
     public void SetPower(float power) => this.power = power;
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+
         sc = GetComponent<SphereCollider>();
         
     }
@@ -55,12 +55,12 @@ public class MagnetPole : MonoBehaviour
                 !mp.isNorth && !isNorth)
                 //if same pole repel
             {
-                rb.AddForce(forceVector);
+                PoleRb.AddForce(forceVector);
             }
             else
             //else attract
             {
-                rb.AddForce(-forceVector);
+                PoleRb.AddForce(-forceVector);
             }
         }
         else

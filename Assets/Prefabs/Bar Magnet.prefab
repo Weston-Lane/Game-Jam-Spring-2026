@@ -191,8 +191,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7802271, y: 0.19508108, z: 0.20442113}
-  m_Center: {x: -0.000000029802322, y: 0.10081996, z: -0.0000024586916}
+  m_Size: {x: 0.79561144, y: 0.19947655, z: 0.20442113}
+  m_Center: {x: -0.0010988414, y: 0.103017695, z: -0.0000024586916}
 --- !u!1 &4888080969188153386
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553f9182387958b46bd4e200e6c17f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagnetPole
+  PoleRb: {fileID: 3670645175600495070}
   neighborPoles:
   - {fileID: 6509873177319847294}
   isNorth: 1
@@ -446,6 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553f9182387958b46bd4e200e6c17f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagnetPole
+  PoleRb: {fileID: 3670645175600495070}
   neighborPoles:
   - {fileID: 7317462908048074909}
   isNorth: 0
