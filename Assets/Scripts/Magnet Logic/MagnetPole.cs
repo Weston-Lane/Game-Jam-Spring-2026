@@ -4,7 +4,8 @@ using UnityEngine;
 public class MagnetPole : MonoBehaviour
 {
     #region Inspector Objects
-    //[Header("Object References")]
+    [Header("Object References")]
+    [SerializeField] Rigidbody rb;
 
     [Header("Configuration Variables")]
     [SerializeField] bool isNorth;
@@ -13,12 +14,11 @@ public class MagnetPole : MonoBehaviour
     //[Header("State")]
     #endregion
 
-    Rigidbody rb;
 
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();    
-    }
+    // void Start()
+    // {
+    //     rb = GetComponent<Rigidbody>();    
+    // }
 
     private void OnTriggerStay(Collider collision)
     {

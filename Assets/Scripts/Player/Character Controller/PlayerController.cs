@@ -1,4 +1,6 @@
 using System.Collections;
+// using System.Diagnostics;
+// using System.Numerics;
 using UnityEngine;
 
 namespace KinematicCharacterController
@@ -52,6 +54,7 @@ namespace KinematicCharacterController
         private Vector3 _velocityLeavingGround;
 
         public static Vector3 playerVelocity;
+        private Vector3 currentGravity;
         
         //New Refactored State Machine Stuff
         public KinematicCharacterMotor Motor;
@@ -133,12 +136,39 @@ namespace KinematicCharacterController
             if (!Motor.GroundingStatus.IsStableOnGround)
             {
                 blackboard.LastGroundVelocity = currentVelocity;
-                // StateMachine.ChangeState(Controller.airborneState);
+                if (inputVector.sqrMagnitude > 0f)
+                {
+                    Vector3 targetMovementVelocity = new Vector3(blackboard.LastGroundVelocity.x + (inputVector.x * AirControl), 0, blackboard.LastGroundVelocity.z + (inputVector.z * AirControl));
+
+                    // Prevent climbing on un-stable slopes with air movement
+                    if (Motor.GroundingStatus.FoundAnyGround)
+                    {
+                        Vector3 perpenticularObstructionNormal = Vector3.Cross(Vector3.Cross(Motor.CharacterUp, Motor.GroundingStatus.GroundNormal), Motor.CharacterUp).normalized;
+                        targetMovementVelocity = Vector3.ProjectOnPlane(targetMovementVelocity, perpenticularObstructionNormal);
+                    }
+
+                    Vector3 velocityDiff = Vector3.ProjectOnPlane(targetMovementVelocity - currentVelocity, currentGravity);
+                    currentVelocity += velocityDiff * AirAccelerationSpeed * deltaTime;
+                }
+
+                // Accelerate gravity downward over time
+                currentGravity -= Vector3.up * (FallAcceleration * deltaTime);
+                currentGravity = Vector3.ClampMagnitude(currentGravity, MaxAcceleration);
+                
+                // Apply gravity to velocity
+                currentVelocity += currentGravity * deltaTime;
+
+                // Drag
+                currentVelocity *= (1f / (1f + (Drag * deltaTime)));
             }
             
-
+            //Player is on the ground
             if (Motor.GroundingStatus.IsStableOnGround)
             {
+                Debug.Log("reset gravity");
+                // Reset gravity to default when grounded
+                currentGravity = Vector3.zero;
+
                 // Reorient current velocity to slope without losing magnitude
                 currentVelocity = Motor.GetDirectionTangentToSurface(currentVelocity, Motor.GroundingStatus.GroundNormal) * currentVelocity.magnitude;
 
