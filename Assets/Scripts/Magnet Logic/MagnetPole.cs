@@ -16,11 +16,7 @@ public class MagnetPole : MonoBehaviour
     //comment
     SphereCollider sc;
 
-    // void Start()
-    // {
-    //     rb = GetComponent<Rigidbody>();    
-    // }
-
+    
     private void OnTriggerStay(Collider collision)
     {
 

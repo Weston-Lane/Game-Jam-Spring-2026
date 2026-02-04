@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3406159328340236994}
   - component: {fileID: 3670645175600495070}
+  - component: {fileID: 3630552910752368216}
   m_Layer: 0
   m_Name: Bar Magnet
   m_TagString: Untagged
@@ -148,23 +149,6 @@ Transform:
   - {fileID: 6509873177319847294}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3630552910752368216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840289687380527284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cca21cd73a447bd499f387a965849555, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BarMagnet
-  poles:
-  - {fileID: 7317462908048074909}
-  - {fileID: 6509873177319847294}
-  polePower: 1.24
-  poleFlieldRadius: 0.48
 --- !u!54 &3670645175600495070
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -192,6 +176,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3630552910752368216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840289687380527284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca21cd73a447bd499f387a965849555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BarMagnet
+  poles:
+  - {fileID: 7317462908048074909}
+  - {fileID: 6509873177319847294}
+  polePower: 1.24
+  poleFlieldRadius: 0.48
 --- !u!1 &4888080969188153386
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +352,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553f9182387958b46bd4e200e6c17f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagnetPole
+  PoleRb: {fileID: 3670645175600495070}
+  neighborPoles: []
   isNorth: 1
   power: 1.24
   fieldRadius: 0.5
@@ -465,6 +468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553f9182387958b46bd4e200e6c17f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagnetPole
+  PoleRb: {fileID: 3670645175600495070}
+  neighborPoles: []
   isNorth: 0
   power: 1.24
   fieldRadius: 0.5

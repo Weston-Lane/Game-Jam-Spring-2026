@@ -242,7 +242,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1471867117849670632, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: power
-      value: 1.5
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 1471867117849670632, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: fieldRadius
@@ -298,11 +298,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3630552910752368216, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: polePower
-      value: 1.5
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 3630552910752368216, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: poleFlieldRadius
-      value: 0.5
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 4479861065688756199, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -310,7 +310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4720973440874855230, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: m_Radius
-      value: 0.5
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 4720973440874855230, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: m_IsTrigger
@@ -318,7 +318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5642703288106529065, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: m_Radius
-      value: 0.5
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 6509873177319847294, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -326,7 +326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6890045435235697625, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: power
-      value: 1.5
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 6890045435235697625, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: fieldRadius
@@ -619,7 +619,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1471867117849670632, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: power
-      value: 1.13
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 1471867117849670632, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: fieldRadius
@@ -671,7 +671,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3630552910752368216, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: polePower
-      value: 1.13
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630552910752368216, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
+      propertyPath: poleFlieldRadius
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 3670645175600495070, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: m_Interpolate
@@ -683,11 +687,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4720973440874855230, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: m_Radius
-      value: 0.5
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 5642703288106529065, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: m_Radius
-      value: 0.5
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 6509873177319847294, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -695,7 +699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6890045435235697625, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: power
-      value: 1.13
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 6890045435235697625, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
       propertyPath: fieldRadius
