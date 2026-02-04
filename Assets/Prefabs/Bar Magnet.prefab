@@ -293,9 +293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7317462908048074909}
   - component: {fileID: 1471867117849670632}
-  - component: {fileID: 4824982102174042636}
   - component: {fileID: 4720973440874855230}
-  - component: {fileID: 4021203892640515666}
   m_Layer: 0
   m_Name: Pole N
   m_TagString: Untagged
@@ -336,33 +334,6 @@ MonoBehaviour:
   isNorth: 1
   power: 1.24
   fieldRadius: 0.5
---- !u!54 &4824982102174042636
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5151055558503256860}
-  serializedVersion: 5
-  m_Mass: 0.0000001
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!135 &4720973440874855230
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -384,22 +355,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!138 &4021203892640515666
-FixedJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5151055558503256860}
-  serializedVersion: 1
-  m_ConnectedBody: {fileID: 3670645175600495070}
-  m_ConnectedArticulationBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!1 &7879629844065408156
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,9 +365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6509873177319847294}
   - component: {fileID: 6890045435235697625}
-  - component: {fileID: 4959945120136040268}
   - component: {fileID: 5642703288106529065}
-  - component: {fileID: 2787376855317702906}
   m_Layer: 0
   m_Name: Pole S
   m_TagString: Untagged
@@ -453,33 +406,6 @@ MonoBehaviour:
   isNorth: 0
   power: 1.24
   fieldRadius: 0.5
---- !u!54 &4959945120136040268
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7879629844065408156}
-  serializedVersion: 5
-  m_Mass: 0.0000001
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!135 &5642703288106529065
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -501,19 +427,3 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!138 &2787376855317702906
-FixedJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7879629844065408156}
-  serializedVersion: 1
-  m_ConnectedBody: {fileID: 3670645175600495070}
-  m_ConnectedArticulationBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
