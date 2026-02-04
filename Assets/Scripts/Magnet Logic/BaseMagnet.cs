@@ -11,7 +11,7 @@ public class BaseMagnet : MonoBehaviour
     [SerializeField] float poleFlieldRadius;
     //[Header("State")]
     #endregion
-
+    //commment
     void Start()
     {
         foreach (var pole in poles)

@@ -16,7 +16,7 @@ public class MagnetPole : MonoBehaviour
 
     //[Header("State")]
     #endregion
-
+    //comment
     SphereCollider sc;
 
     public void SetFieldRadius(float radius) => GetComponent<SphereCollider>().radius = radius;

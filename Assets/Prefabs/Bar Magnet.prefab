@@ -143,8 +143,8 @@ MonoBehaviour:
   poles:
   - {fileID: 7317462908048074909}
   - {fileID: 6509873177319847294}
-  polePower: 1
-  poleFlieldRadius: 0.5
+  polePower: 1.24
+  poleFlieldRadius: 0.48
 --- !u!54 &3670645175600495070
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -334,7 +334,7 @@ MonoBehaviour:
   neighborPoles:
   - {fileID: 6509873177319847294}
   isNorth: 1
-  power: 1
+  power: 1.24
   fieldRadius: 0.5
 --- !u!54 &4824982102174042636
 Rigidbody:
@@ -451,7 +451,7 @@ MonoBehaviour:
   neighborPoles:
   - {fileID: 7317462908048074909}
   isNorth: 0
-  power: 1
+  power: 1.24
   fieldRadius: 0.5
 --- !u!54 &4959945120136040268
 Rigidbody:

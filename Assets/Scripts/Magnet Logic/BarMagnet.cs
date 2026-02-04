@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//comment
 public class BarMagnet : BaseMagnet
 {
     #region Inspector Objects
