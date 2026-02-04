@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# FMOD macOS bundles must stay LF
+Assets/Plugins/FMOD/platforms/mac/lib/**/Info.plist text eol=lf
+
+# Unity YAML files are fine as text
+*.unity text
+*.meta text

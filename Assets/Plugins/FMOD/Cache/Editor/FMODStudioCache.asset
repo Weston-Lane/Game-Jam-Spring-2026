@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMODProject/SpringGameJam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639057572387297495
+  lastModified: 639057591258432427
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -42,7 +42,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 1435298935184204049}
   cacheVersion: 131858
-  cacheTime: 639057572387327482
+  cacheTime: 639057591258442429
   SerializableEventsDict: []
 --- !u!114 &1435298935184204049
 MonoBehaviour:
@@ -59,7 +59,7 @@ MonoBehaviour:
   Path: FMODProject/SpringGameJam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639057572387327482
+  lastModified: 639057591258442429
   FileSizes:
   - Name: Desktop
     Value: 712
