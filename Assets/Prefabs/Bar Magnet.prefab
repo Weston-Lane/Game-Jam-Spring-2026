@@ -148,6 +148,23 @@ Transform:
   - {fileID: 6509873177319847294}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3630552910752368216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840289687380527284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca21cd73a447bd499f387a965849555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BarMagnet
+  poles:
+  - {fileID: 7317462908048074909}
+  - {fileID: 6509873177319847294}
+  polePower: 1.24
+  poleFlieldRadius: 0.48
 --- !u!54 &3670645175600495070
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -335,7 +352,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagnetPole
   isNorth: 1
-  power: 1
+  power: 1.24
+  fieldRadius: 0.5
 --- !u!54 &4824982102174042636
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -448,7 +466,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagnetPole
   isNorth: 0
-  power: 1
+  power: 1.24
+  fieldRadius: 0.5
 --- !u!54 &4959945120136040268
 Rigidbody:
   m_ObjectHideFlags: 0

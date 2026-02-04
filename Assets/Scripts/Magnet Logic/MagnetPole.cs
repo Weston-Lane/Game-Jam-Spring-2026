@@ -13,7 +13,8 @@ public class MagnetPole : MonoBehaviour
 
     //[Header("State")]
     #endregion
-
+    //comment
+    SphereCollider sc;
 
     // void Start()
     // {
