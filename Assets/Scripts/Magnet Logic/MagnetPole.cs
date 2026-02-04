@@ -22,7 +22,6 @@ public class MagnetPole : MonoBehaviour
 
     private void OnTriggerStay(Collider collision)
     {
-        Debug.Log(transform + " Has hit " + collision.transform);
 
         MagnetPole mp;
         if(collision.transform.TryGetComponent<MagnetPole>(out mp))
