@@ -1,10 +1,12 @@
 using System.Data.Common;
+using UnityEditor.TerrainTools;
 using UnityEngine;
 
 public class MagnetPole : MonoBehaviour
 {
     #region Inspector Objects
-    //[Header("Object References")]
+    [Header("Object References")]
+    [SerializeField] Transform[] neighborPoles;
 
     [Header("Configuration Variables")]
     [SerializeField] bool isNorth;
@@ -16,6 +18,9 @@ public class MagnetPole : MonoBehaviour
 
     Rigidbody rb;
     SphereCollider sc;
+
+    public void SetFieldRadius(float radius) => GetComponent<SphereCollider>().radius = radius;
+    public void SetPower(float power) => this.power = power;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -33,11 +38,18 @@ public class MagnetPole : MonoBehaviour
         MagnetPole mp;
         if(collision.transform.TryGetComponent<MagnetPole>(out mp))
         {
+            foreach(var neighbor in neighborPoles)
+                //check if pole is a neighbor
+            {
+                if(collision.transform == neighbor)
+                    { return; }
+            }
+
             Vector3 dirVector = transform.position - collision.transform.position;
             dirVector = dirVector.normalized;
             float dist = Vector3.Distance(transform.position, collision.transform.position);
             Vector3 forceVector =
-                dirVector / (dist * dist) * power * mp.power;
+                (dirVector / (dist * dist)) * power * mp.power;
 
             if(mp.isNorth && isNorth ||
                 !mp.isNorth && !isNorth)
@@ -56,4 +68,7 @@ public class MagnetPole : MonoBehaviour
             return;
         }
     }
+
+
+
 }
