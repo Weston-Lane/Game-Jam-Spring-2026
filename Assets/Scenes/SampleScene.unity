@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   mouseLook: {fileID: 130143998}
-  MaxStableMoveSpeed: 1.5
+  MaxStableMoveSpeed: 1
   StableMovementSharpness: 15
   OrientationSharpness: 10
   jumpStrength: 0
