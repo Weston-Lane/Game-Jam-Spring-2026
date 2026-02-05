@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8185878845673013440}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wall Transform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6408590513061491273}
   - component: {fileID: 8292289201036408012}
   - component: {fileID: 3262243936597314504}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Metallic Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
