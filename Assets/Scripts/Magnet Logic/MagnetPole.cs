@@ -99,7 +99,9 @@ public class MagnetPole : MonoBehaviour
     public void ChangePolarity(Polarity polarity)
     {
         bool isNorth = polarity == Polarity.North;
+        bool isUncharged = polarity == Polarity.Uncharged;
         renderer.material.SetFloat("_IsNorth", isNorth ? 1f : 0f);  
+        renderer.material.SetFloat("_IsUncharged", isUncharged ? 1f : 0f);  
         this.polarity = polarity;
         emissionBoost = 1;
     }
