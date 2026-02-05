@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: FMODProject/SpringGameJam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639058261105140644
+  lastModified: 639058401662610857
   FileSizes:
   - Name: Desktop
-    Value: 818
+    Value: 882
   Exists: 1
 --- !u!114 &-2173287460241942873
 MonoBehaviour:
@@ -85,6 +85,7 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -1079301338803634109}
   - {fileID: 3178075390055795100}
+  - {fileID: 4886249774779083753}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7184465390633956352}
@@ -92,12 +93,14 @@ MonoBehaviour:
   - {fileID: 7184465390633956352}
   - {fileID: -3603417354971248456}
   cacheVersion: 131858
-  cacheTime: 639058261105140644
+  cacheTime: 639058401662610857
   SerializableEventsDict:
   - key: event:/Button/Button Release
     index: 0
   - key: event:/Button/Button Press
     index: 1
+  - key: event:/Magnets/Charge Magnet
+    index: 2
 --- !u!114 &1435298935184204049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +148,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 117
+--- !u!114 &4886249774779083753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Magnets/Charge Magnet
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Magnets/Charge Magnet
+  Guid:
+    Data1: -1418618570
+    Data2: 1262989193
+    Data3: 1253656757
+    Data4: 869283192
+  Banks:
+  - {fileID: 7184465390633956352}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 300
 --- !u!114 &7184465390633956352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,8 +190,8 @@ MonoBehaviour:
   Path: FMODProject/SpringGameJam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639058261105125126
+  lastModified: 639058401662580845
   FileSizes:
   - Name: Desktop
-    Value: 64416
+    Value: 75424
   Exists: 1

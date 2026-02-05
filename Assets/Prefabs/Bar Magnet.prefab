@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d08e0637ab7de024ba28920ae3ef0f8b, type: 2}
+  - {fileID: 2100000, guid: 53aaa0d71454f0b439c22f655e796756, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 3630552910752368216}
   - component: {fileID: 3670645175600495070}
   - component: {fileID: 2183497324109203943}
+  - component: {fileID: 7523483235214892330}
   m_Layer: 0
   m_Name: Bar Magnet
   m_TagString: Untagged
@@ -166,7 +167,6 @@ MonoBehaviour:
   - {fileID: 7317462908048074909}
   - {fileID: 6509873177319847294}
   polePower: 1.5
-  poleFlieldRadius: 0.5
 --- !u!54 &3670645175600495070
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -209,6 +209,27 @@ MonoBehaviour:
   strength: 80
   damping: 20
   rb: {fileID: 3670645175600495070}
+--- !u!65 &7523483235214892330
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840289687380527284}
+  m_Material: {fileID: 13400000, guid: bc10c7df6940a74489ff25c336f6d1af, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.80563414, y: 0.2080695, z: 0.2079302}
+  m_Center: {x: 0.00078494847, y: 0.15187317, z: 0.000041618943}
 --- !u!1 &4888080969188153386
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +297,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6c4c5ba379300214fab242a0377b55c5, type: 2}
+  - {fileID: 2100000, guid: 53aaa0d71454f0b439c22f655e796756, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -368,7 +389,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MagnetPole
   PoleRb: {fileID: 3670645175600495070}
   neighborPoles: []
-  isNorth: 1
+  renderer: {fileID: 4538353584253014684}
+  polarity: 0
   power: 1.5
   fieldRadius: 0.5
 --- !u!135 &4720973440874855230
@@ -439,7 +461,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MagnetPole
   PoleRb: {fileID: 3670645175600495070}
   neighborPoles: []
-  isNorth: 0
+  renderer: {fileID: 6154834679113467098}
+  polarity: 1
   power: 1.5
   fieldRadius: 0.5
 --- !u!135 &5642703288106529065

@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class BaseMagnet : MonoBehaviour
 {
+    public enum Polarity{
+        North,
+        South,
+        Uncharged
+    }
+
     #region Inspector Objects
     [Header("Object References")]
     [SerializeField] Transform[] poles;

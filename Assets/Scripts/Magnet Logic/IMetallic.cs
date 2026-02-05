@@ -1,7 +1,8 @@
 using UnityEngine;
+using static BaseMagnet;
 
 public interface IMetallic
 {
-    bool GetPolarity();
-    bool HasCharge();
+    Polarity GetPolarity();
+    Vector3 GetNormal();
 }

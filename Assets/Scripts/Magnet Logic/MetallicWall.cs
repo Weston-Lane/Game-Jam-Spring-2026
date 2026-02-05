@@ -1,16 +1,18 @@
 using UnityEngine;
+using static BaseMagnet;
 
 public class MetallicWall : MonoBehaviour, IMetallic
 {
-    [SerializeField] private bool isNorth;
-    [SerializeField] private bool hasCharge;
+    [SerializeField] private Polarity polarity;
+    [SerializeField] private Transform wallNormal;
 
-    public bool GetPolarity()
+    public Polarity GetPolarity()
     {
-        return isNorth;
+        return polarity;
     }
-    public bool HasCharge()
+
+    public Vector3 GetNormal()
     {
-        return hasCharge;
+        return wallNormal.forward;
     }
 }
