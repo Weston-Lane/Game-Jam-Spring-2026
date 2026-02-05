@@ -1,5 +1,3 @@
-using System.Data.Common;
-
 using UnityEngine;
 
 public class MagnetPole : MonoBehaviour
@@ -36,6 +34,8 @@ public class MagnetPole : MonoBehaviour
     {
 
         MagnetPole mp;
+        IMetallic metallic;
+
         if (collision.transform.TryGetComponent<MagnetPole>(out mp))
         {
             foreach (var neighbor in neighborPoles)
@@ -59,6 +59,27 @@ public class MagnetPole : MonoBehaviour
             }
             else
             //else attract
+            {
+                PoleRb.AddForce(-forceVector);
+            }
+        }
+        else if (collision.transform.TryGetComponent<IMetallic>(out metallic))
+        {
+            Vector3 dirVector = transform.position - collision.transform.position;
+            dirVector = dirVector.normalized;
+            float dist = Vector3.Distance(transform.position, collision.transform.position);
+            Vector3 forceVector =
+                (dirVector / (dist * dist)) * power;
+
+            if (!metallic.HasCharge())
+            {
+                PoleRb.AddForce(-forceVector);
+            }
+            else if (metallic.GetPolarity() && isNorth || !metallic.GetPolarity() && !isNorth)
+            {
+                PoleRb.AddForce(forceVector);
+            }
+            else
             {
                 PoleRb.AddForce(-forceVector);
             }

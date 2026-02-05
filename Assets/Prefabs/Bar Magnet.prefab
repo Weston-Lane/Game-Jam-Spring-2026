@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 3630552910752368216}
   - component: {fileID: 3670645175600495070}
   - component: {fileID: 2183497324109203943}
-  - component: {fileID: 6077922319901077822}
   m_Layer: 0
   m_Name: Bar Magnet
   m_TagString: Untagged
@@ -196,21 +195,6 @@ Rigidbody:
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &2183497324109203943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840289687380527284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e1cc38939ffad24fac0e61ec98f13ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PhysicsObject
-  strength: 80
-  damping: 20
-  rb: {fileID: 3670645175600495070}
---- !u!114 &6077922319901077822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -348,9 +332,9 @@ GameObject:
   - component: {fileID: 7317462908048074909}
   - component: {fileID: 1471867117849670632}
   - component: {fileID: 4720973440874855230}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pole N
-  m_TagString: Untagged
+  m_TagString: Pole
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -419,9 +403,9 @@ GameObject:
   - component: {fileID: 6509873177319847294}
   - component: {fileID: 6890045435235697625}
   - component: {fileID: 5642703288106529065}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pole S
-  m_TagString: Untagged
+  m_TagString: Pole
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

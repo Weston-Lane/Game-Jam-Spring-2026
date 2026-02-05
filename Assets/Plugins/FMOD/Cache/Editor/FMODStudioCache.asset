@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: FMODProject/SpringGameJam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639057591258442429
+  lastModified: 639058261105140644
   FileSizes:
   - Name: Desktop
-    Value: 712
+    Value: 818
   Exists: 1
 --- !u!114 &-2173287460241942873
 MonoBehaviour:
@@ -40,6 +40,33 @@ MonoBehaviour:
   - Name: 
     Value: 712
   Exists: 1
+--- !u!114 &-1079301338803634109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Button/Button Release
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Button/Button Release
+  Guid:
+    Data1: -1332172401
+    Data2: 1124937701
+    Data3: 1096373691
+    Data4: 468644011
+  Banks:
+  - {fileID: 7184465390633956352}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 271
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,7 +82,9 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 7184465390633956352}
   - {fileID: -3603417354971248456}
-  EditorEvents: []
+  EditorEvents:
+  - {fileID: -1079301338803634109}
+  - {fileID: 3178075390055795100}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7184465390633956352}
@@ -63,8 +92,12 @@ MonoBehaviour:
   - {fileID: 7184465390633956352}
   - {fileID: -3603417354971248456}
   cacheVersion: 131858
-  cacheTime: 639057591258442429
-  SerializableEventsDict: []
+  cacheTime: 639058261105140644
+  SerializableEventsDict:
+  - key: event:/Button/Button Release
+    index: 0
+  - key: event:/Button/Button Press
+    index: 1
 --- !u!114 &1435298935184204049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,6 +118,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 712
   Exists: 1
+--- !u!114 &3178075390055795100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Button/Button Press
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Button/Button Press
+  Guid:
+    Data1: -881998348
+    Data2: 1115817033
+    Data3: 679865236
+    Data4: 996485999
+  Banks:
+  - {fileID: 7184465390633956352}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 117
 --- !u!114 &7184465390633956352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,8 +160,8 @@ MonoBehaviour:
   Path: FMODProject/SpringGameJam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639057591258432427
+  lastModified: 639058261105125126
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 64416
   Exists: 1
