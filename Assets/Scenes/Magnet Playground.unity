@@ -2198,6 +2198,7 @@ MonoBehaviour:
   grabPoint: {fileID: 1295885357}
   headTransform: {fileID: 130143997}
   range: 5
+  heldItemRotationSpeed: 5
   heldObject: {fileID: 0}
 --- !u!1 &1867452308
 GameObject:

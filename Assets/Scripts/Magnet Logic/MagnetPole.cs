@@ -61,11 +61,15 @@ public class MagnetPole : MonoBehaviour
             {
                 PoleRb.AddForce(forceVector);
             }
-            else
+            else if(mp.polarity == Polarity.North && polarity == Polarity.South ||
+                    mp.polarity == Polarity.South && polarity == Polarity.North)
             //else attract
             {
                 PoleRb.AddForce(-forceVector);
             }
+            else
+            //do nothing // Uncharged
+            { }
         }
 
         //Or is this a metallic object
