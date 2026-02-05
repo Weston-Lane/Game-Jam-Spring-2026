@@ -1,6 +1,5 @@
-using System.Data.Common;
-
 using UnityEngine;
+using static BaseMagnet;
 
 public class MagnetPole : MonoBehaviour
 {
@@ -9,8 +8,11 @@ public class MagnetPole : MonoBehaviour
     [SerializeField] Rigidbody PoleRb;
     [SerializeField] Transform[] neighborPoles;
 
+    [Header("Visuals")]
+    [SerializeField] Renderer renderer;
+
     [Header("Configuration Variables")]
-    [SerializeField] bool isNorth;
+    [SerializeField] public Polarity polarity;
     [SerializeField] float power = 2f;
     [SerializeField] float fieldRadius = 0.5f;
 
@@ -18,15 +20,23 @@ public class MagnetPole : MonoBehaviour
     #endregion
     //comment
     SphereCollider sc;
+    private float emissionBoost = 0;
 
     public void SetFieldRadius(float radius) => GetComponent<SphereCollider>().radius = radius;
     public void SetPower(float power) => this.power = power;
     void Start()
     {
-
         sc = GetComponent<SphereCollider>();
 
+        ChangePolarity(polarity);
     }
+
+    public void Update()
+    {
+        emissionBoost = MathHelpers.ExpDecay(emissionBoost, 0, 25, Time.deltaTime);
+        renderer.material.SetFloat("_EmissionBoost", emissionBoost);
+    }
+
     private void OnValidate()
     {
         sc = GetComponent<SphereCollider>();
@@ -36,6 +46,9 @@ public class MagnetPole : MonoBehaviour
     {
 
         MagnetPole mp;
+        IMetallic metallic;
+
+        //Is this another pole?
         if (collision.transform.TryGetComponent<MagnetPole>(out mp))
         {
             foreach (var neighbor in neighborPoles)
@@ -51,8 +64,7 @@ public class MagnetPole : MonoBehaviour
             Vector3 forceVector =
                 (dirVector / (dist * dist)) * power * mp.power;
 
-            if (mp.isNorth && isNorth ||
-                !mp.isNorth && !isNorth)
+            if (mp.polarity == Polarity.North && polarity == Polarity.North || mp.polarity == Polarity.South && polarity == Polarity.South)
             //if same pole repel
             {
                 PoleRb.AddForce(forceVector);
@@ -63,12 +75,40 @@ public class MagnetPole : MonoBehaviour
                 PoleRb.AddForce(-forceVector);
             }
         }
+
+        //Or is this a metallic object
+        else if (collision.transform.TryGetComponent<IMetallic>(out metallic))
+        {
+            Vector3 dirVector = metallic.GetNormal();
+            dirVector = dirVector.normalized;
+            float dist = Vector3.Distance(transform.position, collision.transform.position);
+            Vector3 forceVector =
+                (dirVector / (dist * dist)) * power;
+
+            if (metallic.GetPolarity() == Polarity.Uncharged)
+            {
+                PoleRb.AddForce(-forceVector);
+            }
+            else if (metallic.GetPolarity() == Polarity.North && polarity == Polarity.North || metallic.GetPolarity() == Polarity.South && polarity == Polarity.South)
+            {
+                PoleRb.AddForce(forceVector);
+            }
+            else
+            {
+                PoleRb.AddForce(-forceVector);
+            }
+        }
         else
         {
             return;
         }
     }
-
-
-
+   
+    public void ChangePolarity(Polarity polarity)
+    {
+        bool isNorth = polarity == Polarity.North;
+        renderer.material.SetFloat("_IsNorth", isNorth ? 1f : 0f);  
+        this.polarity = polarity;
+        emissionBoost = 1;
+    }
 }

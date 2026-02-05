@@ -2,13 +2,18 @@ using UnityEngine;
 
 public class BaseMagnet : MonoBehaviour
 {
+    public enum Polarity{
+        North,
+        South,
+        Uncharged
+    }
+
     #region Inspector Objects
     [Header("Object References")]
     [SerializeField] Transform[] poles;
 
     [Header("Configuration Variables")]
     [SerializeField] float polePower;
-    [SerializeField] float poleFlieldRadius;
     //[Header("State")]
     #endregion
     //commment
@@ -16,7 +21,6 @@ public class BaseMagnet : MonoBehaviour
     {
         foreach (var pole in poles)
         {
-            pole.GetComponent<MagnetPole>().SetFieldRadius(poleFlieldRadius);
             pole.GetComponent<MagnetPole>().SetPower(polePower);
         }
     }
@@ -24,7 +28,6 @@ public class BaseMagnet : MonoBehaviour
     {
         foreach (var pole in poles)
         {
-            pole.GetComponent<MagnetPole>().SetFieldRadius(poleFlieldRadius);
             pole.GetComponent<MagnetPole>().SetPower(polePower);
         }
     }
