@@ -18,6 +18,8 @@ public class MouseLook : MonoBehaviour
     public float rotY = 0.0f; // rotation around the up/y axis
     public float rotX = 0.0f; // rotation around the right/x axis
 
+    private bool cameraLock = false;
+    public void SetCameraLock(bool set) => cameraLock = set;
     void Start()
     {
         Vector3 rot = transform.localRotation.eulerAngles;
@@ -29,17 +31,19 @@ public class MouseLook : MonoBehaviour
 
     private void Update()   
     {
-        float mouseX = Input.GetAxis("Mouse X");
-        float mouseY = -Input.GetAxis("Mouse Y");
+        if(!cameraLock)
+        {
+            float mouseX = Input.GetAxis("Mouse X");
+            float mouseY = -Input.GetAxis("Mouse Y");
 
-        rotY += mouseX * mouseSensitivity;
-        rotX += mouseY * mouseSensitivity;
+            rotY += mouseX * mouseSensitivity;
+            rotX += mouseY * mouseSensitivity;
 
-        rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle);
+            rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle);
 
-        localRotation = Quaternion.Euler(rotX, rotY, 0);
-        smoothRot = MathHelpers.ExpDecay(smoothRot, localRotation, lerpSpeed, Time.deltaTime);
-        
+            localRotation = Quaternion.Euler(rotX, rotY, 0);
+            smoothRot = MathHelpers.ExpDecay(smoothRot, localRotation, lerpSpeed, Time.deltaTime);
+        }
     }
     
     private void LateUpdate(){

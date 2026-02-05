@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private Transform grabPoint;
     [SerializeField] private Transform headTransform;
     [SerializeField] private float range;
+    [SerializeField] private float heldItemRotationSpeed = 5f;
 
     public PhysicsObject heldObject;
 
@@ -45,6 +47,19 @@ public class PlayerInteraction : MonoBehaviour
 
             heldObject = null;
         }
+        if (heldObject != null && Input.GetKey(KeyCode.R))
+        //if R is held then lock camera and rotate obj in hand
+        {
+            headTransform.GetComponent<MouseLook>().SetCameraLock(true);
+            Vector2 mouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+
+            heldObject.transform.Rotate(headTransform.up, -mouseDelta.x * heldItemRotationSpeed, Space.World);
+            heldObject.transform.Rotate(headTransform.right, mouseDelta.y * heldItemRotationSpeed, Space.World);
+
+        }
+        else
+            { headTransform.GetComponent<MouseLook>().SetCameraLock(false); }
+        
     }
 
     private void PickUpPhysicsObject(PhysicsObject physObject)
@@ -72,4 +87,6 @@ public class PlayerInteraction : MonoBehaviour
             heldObject.rb.AddForce(force, ForceMode.Force);
         }
     }
+
 }
+
