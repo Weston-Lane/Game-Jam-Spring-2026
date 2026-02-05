@@ -18,16 +18,13 @@ public class MagnetPole : MonoBehaviour
 
     //[Header("State")]
     #endregion
-    //comment
-    SphereCollider sc;
+
     private float emissionBoost = 0;
 
     public void SetFieldRadius(float radius) => GetComponent<SphereCollider>().radius = radius;
     public void SetPower(float power) => this.power = power;
     void Start()
     {
-        sc = GetComponent<SphereCollider>();
-
         ChangePolarity(polarity);
     }
 
@@ -37,11 +34,6 @@ public class MagnetPole : MonoBehaviour
         renderer.material.SetFloat("_EmissionBoost", emissionBoost);
     }
 
-    private void OnValidate()
-    {
-        sc = GetComponent<SphereCollider>();
-        sc.radius = fieldRadius;
-    }
     private void OnTriggerStay(Collider collision)
     {
 

@@ -165,7 +165,6 @@ namespace KinematicCharacterController
             //Player is on the ground
             if (Motor.GroundingStatus.IsStableOnGround)
             {
-                Debug.Log("reset gravity");
                 // Reset gravity to default when grounded
                 currentGravity = Vector3.zero;
 

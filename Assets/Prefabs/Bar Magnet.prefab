@@ -164,9 +164,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BarMagnet
   poles:
-  - {fileID: 7317462908048074909}
-  - {fileID: 6509873177319847294}
+  - {fileID: 1471867117849670632}
+  - {fileID: 6890045435235697625}
   polePower: 1.5
+  fieldRadius: 0.5
 --- !u!54 &3670645175600495070
 Rigidbody:
   m_ObjectHideFlags: 0

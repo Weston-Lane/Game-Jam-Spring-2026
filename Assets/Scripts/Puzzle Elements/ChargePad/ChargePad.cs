@@ -18,7 +18,6 @@ public class ChargePad : MonoBehaviour
     {
         bool isNorth = polarity == Polarity.North;
         renderer.material.SetFloat("_IsNorth", isNorth ? 1f : 0f); 
-        Debug.Log($"{polarity}");
         this.polarity = polarity;
 
         switch (polarity)
