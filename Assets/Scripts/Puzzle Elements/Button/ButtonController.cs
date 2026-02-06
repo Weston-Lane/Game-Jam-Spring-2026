@@ -23,7 +23,7 @@ public class ButtonController : MonoBehaviour
 
         if (!pressed)
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Button/Button Press");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Button/Button Press", transform.position);
             toggleable.ToggleOn();
         } 
         
@@ -40,7 +40,7 @@ public class ButtonController : MonoBehaviour
             animator.Play("button_release");
             if (pressed)
             {
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Button/Button Release");
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Button/Button Release", transform.position);
                 toggleable.ToggleOff();
             } 
 

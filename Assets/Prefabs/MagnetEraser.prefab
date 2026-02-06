@@ -137,6 +137,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagnetEraser
   renderer: {fileID: 6814382071881463364}
+  type: 0
+  destroyColor: {r: 0, g: 0, b: 0, a: 0}
+  polarityNorthColor: {r: 0, g: 0, b: 0, a: 0}
+  PolaritySouthColor: {r: 0, g: 0, b: 0, a: 0}
+  UnChargeColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &612565856068163909
 BoxCollider:
   m_ObjectHideFlags: 0

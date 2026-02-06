@@ -13,6 +13,9 @@ public class DoorController : MonoBehaviour, IToggleable
     [SerializeField] private float doorOpenHeight;
     [SerializeField] private AnimationCurve curve;
 
+    [Header("Number of inputs to open door")]
+    [SerializeField] private int numInputs;
+
     private float doorProgress;
     private float doorTarget;
 
@@ -44,6 +47,8 @@ public class DoorController : MonoBehaviour, IToggleable
     public void ToggleOn()
     {
         ToggleSources++; 
+        if (ToggleSources < numInputs) return;
+        
         targetPosition = openPosition;   
         doorTarget = 1;
     }
@@ -51,7 +56,7 @@ public class DoorController : MonoBehaviour, IToggleable
     public void ToggleOff()
     {
         ToggleSources--;
-        if (ToggleSources > 0) return;
+        if (ToggleSources > numInputs) return;
 
         targetPosition = closedPosition;
         doorTarget = 0;

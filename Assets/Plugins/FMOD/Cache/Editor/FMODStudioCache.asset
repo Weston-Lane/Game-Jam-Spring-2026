@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4899615588502429737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spawner Button/Spawner Press
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Spawner Button/Spawner Press
+  Guid:
+    Data1: 644526731
+    Data2: 1219278190
+    Data3: 1839197573
+    Data4: 2052967817
+  Banks:
+  - {fileID: 7184465390633956352}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 396
 --- !u!114 &-3603417354971248456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +42,10 @@ MonoBehaviour:
   Path: FMODProject/SpringGameJam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639058863902268295
+  lastModified: 639059880678723385
   FileSizes:
   - Name: Desktop
-    Value: 882
+    Value: 942
   Exists: 1
 --- !u!114 &-2173287460241942873
 MonoBehaviour:
@@ -86,6 +113,7 @@ MonoBehaviour:
   - {fileID: -1079301338803634109}
   - {fileID: 3178075390055795100}
   - {fileID: 4886249774779083753}
+  - {fileID: -4899615588502429737}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7184465390633956352}
@@ -93,7 +121,7 @@ MonoBehaviour:
   - {fileID: 7184465390633956352}
   - {fileID: -3603417354971248456}
   cacheVersion: 131858
-  cacheTime: 639058863902268295
+  cacheTime: 639059880678723385
   SerializableEventsDict:
   - key: event:/Button/Button Release
     index: 0
@@ -101,6 +129,8 @@ MonoBehaviour:
     index: 1
   - key: event:/Magnets/Charge Magnet
     index: 2
+  - key: event:/Spawner Button/Spawner Press
+    index: 3
 --- !u!114 &1435298935184204049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,8 +220,8 @@ MonoBehaviour:
   Path: FMODProject/SpringGameJam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639058863902263294
+  lastModified: 639059880678703368
   FileSizes:
   - Name: Desktop
-    Value: 75424
+    Value: 76800
   Exists: 1
