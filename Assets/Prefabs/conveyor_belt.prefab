@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4435181617755557079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5758313033606291592}
+  m_Layer: 0
+  m_Name: beltNormal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5758313033606291592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4435181617755557079}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.043, z: -0.0020999908}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 689262996687229913}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &5958885653151874346
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,6 +152,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2031fec07ec42314dae3276a54d08c6e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8793289243085255285}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2031fec07ec42314dae3276a54d08c6e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5758313033606291592}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 2031fec07ec42314dae3276a54d08c6e, type: 3}
       insertIndex: -1
@@ -193,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ConveyorBelt
   beltForce: 0.65
   forwardTransform: {fileID: 8793289243085255285}
+  beltNormal: {fileID: 5758313033606291592}
 --- !u!4 &689262996687229913 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2031fec07ec42314dae3276a54d08c6e, type: 3}
