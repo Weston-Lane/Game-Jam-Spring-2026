@@ -1,0 +1,69 @@
+using UnityEngine;
+
+public class MagnetEraser : MonoBehaviour
+{
+    #region Inspector Objects
+    [Header("Object References")]
+    [SerializeField] Renderer renderer;
+
+    //[Header("Configuration Variables")]
+
+    [Header("State")]
+    [SerializeField] Type type;
+    #endregion
+    enum Type
+    {
+        Destroy,
+        PolarityNorth,
+        PolaritySouth,
+        UnCharge
+    }
+    Color destroyColor = Color.yellow, 
+          polarityNorthColor = Color.red,
+          PolaritySouthColor = Color.powderBlue, 
+          UnChargeColor = Color.grey;
+    const string COLOR = "_Color";
+    void Start()
+    {
+
+        switch (type)
+        {
+            case Type.Destroy:
+            {
+                renderer.material.SetColor(COLOR, destroyColor);
+            }
+            break;
+            case Type.PolarityNorth:
+            {
+                renderer.material.SetColor(COLOR, polarityNorthColor);
+            }
+            break;
+            case Type.PolaritySouth:
+            {
+                renderer.material.SetColor(COLOR, PolaritySouthColor);
+            }
+            break;
+
+            case Type.UnCharge:
+            {
+                renderer.material.SetColor(COLOR, UnChargeColor);
+            }
+            break;
+
+            default:
+            {
+
+            }
+            break;
+        }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.TryGetComponent<BaseMagnet>(out var magnet))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+}
