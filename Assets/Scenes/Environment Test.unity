@@ -1313,7 +1313,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2726402915556013837, guid: 93a8d3c49c2a9af4cb084f577bc64195, type: 3}
       propertyPath: doorSpeed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2726402915556013837, guid: 93a8d3c49c2a9af4cb084f577bc64195, type: 3}
       propertyPath: curve.m_Curve.Array.size
