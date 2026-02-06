@@ -39,7 +39,7 @@ public class ChargePad : MonoBehaviour
             if (pole.polarity != polarity)
             {
                 pole.ChangePolarity(polarity);
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Magnets/Charge Magnet");
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Magnets/Charge Magnet", transform.position);
             }
         }
     }
