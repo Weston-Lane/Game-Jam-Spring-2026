@@ -11,6 +11,10 @@ public class DoorController : MonoBehaviour, IToggleable
     public StartPosition startPosition = StartPosition.Closed;
     [SerializeField] private float doorSpeed;
     [SerializeField] private float doorOpenHeight;
+    [SerializeField] private AnimationCurve curve;
+
+    private float doorProgress;
+    private float doorTarget;
 
     private Vector3 closedPosition;
     private Vector3 openPosition;
@@ -41,6 +45,7 @@ public class DoorController : MonoBehaviour, IToggleable
     {
         ToggleSources++; 
         targetPosition = openPosition;   
+        doorTarget = 1;
     }
 
     public void ToggleOff()
@@ -49,10 +54,14 @@ public class DoorController : MonoBehaviour, IToggleable
         if (ToggleSources > 0) return;
 
         targetPosition = closedPosition;
+        doorTarget = 0;
+        
     }
 
     private void Update()
     {
-        transform.position = MathHelpers.ExpDecay(transform.position, targetPosition, doorSpeed, Time.deltaTime);
+        // transform.position = MathHelpers.ExpDecay(transform.position, targetPosition, doorSpeed, Time.deltaTime);
+        doorProgress = MathHelpers.ExpDecay(doorProgress, doorTarget, doorSpeed, Time.deltaTime);
+        transform.position = Vector3.Lerp(closedPosition, openPosition, curve.Evaluate(doorProgress));
     }
 }
