@@ -63,7 +63,46 @@ public class MagnetEraser : MonoBehaviour
     {
         if(other.TryGetComponent<BaseMagnet>(out var magnet))
         {
-            Destroy(other.gameObject);
+            var poles = magnet.GetPoles();
+            switch (type)
+            {
+                case Type.Destroy:
+                {
+                    Destroy(magnet.gameObject);
+                }
+                break;
+                case Type.PolarityNorth:
+                {
+                    foreach(var pole in poles)
+                    {
+                        pole.ChangePolarity(BaseMagnet.Polarity.North);
+                    }
+                }
+                break;
+                case Type.PolaritySouth:
+                {
+                    foreach (var pole in poles)
+                    {
+                        pole.ChangePolarity(BaseMagnet.Polarity.South);
+                    }
+                }
+                break;
+
+                case Type.UnCharge:
+                {
+                    foreach (var pole in poles)
+                    {
+                        pole.ChangePolarity(BaseMagnet.Polarity.Uncharged);
+                    }
+                }
+                break;
+
+                default:
+                {
+
+                }
+                break;
+            }
         }
     }
 }
