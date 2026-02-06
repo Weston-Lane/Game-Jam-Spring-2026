@@ -85,7 +85,8 @@ public class MagnetPole : MonoBehaviour
             {
                 PoleRb.AddForce(-forceVector);
             }
-            else if (metallic.GetPolarity() == Polarity.North && polarity == Polarity.North || metallic.GetPolarity() == Polarity.South && polarity == Polarity.South)
+            else if (metallic.GetPolarity() == Polarity.North && polarity == Polarity.North || 
+                     metallic.GetPolarity() == Polarity.South && polarity == Polarity.South)
             {
                 PoleRb.AddForce(forceVector);
             }

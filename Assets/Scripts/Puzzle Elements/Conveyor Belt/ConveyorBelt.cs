@@ -1,10 +1,20 @@
 using UnityEngine;
 
-public class ConveyorBelt : MonoBehaviour
+public class ConveyorBelt : MonoBehaviour, IMetallic
 {
     [SerializeField] private float beltForce;
     [SerializeField] private Transform forwardTransform;
+    [SerializeField] private Transform beltNormal;
 
+    public Vector3 GetNormal()
+    {
+        return beltNormal.forward;
+    }
+
+    public BaseMagnet.Polarity GetPolarity()
+    {
+        return BaseMagnet.Polarity.Uncharged;
+    }
 
     void OnTriggerStay(Collider other)
 {

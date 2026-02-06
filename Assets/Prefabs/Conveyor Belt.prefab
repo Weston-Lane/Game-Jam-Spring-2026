@@ -213,3 +213,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ConveyorBelt
   beltForce: 1
   forwardTransform: {fileID: 2744334019406027056}
+  beltNormal: {fileID: 5997429811551443757}
