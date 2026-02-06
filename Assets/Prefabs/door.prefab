@@ -97,8 +97,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorController
   startPosition: 1
-  doorSpeed: 2
+  doorSpeed: 3
   doorOpenHeight: 0.85
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.076410264
+      value: 0.076410264
+      inSlope: 0.64523625
+      outSlope: 0.64523625
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.516858
+      value: 0.20434819
+      inSlope: 1.5292051
+      outSlope: 1.5292051
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.81253254
+      value: 1.0227569
+      inSlope: 1.3232732
+      outSlope: 1.3232732
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.121391386
+      outSlope: -0.121391386
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!64 &5369284258008866558
 MeshCollider:
   m_ObjectHideFlags: 0
