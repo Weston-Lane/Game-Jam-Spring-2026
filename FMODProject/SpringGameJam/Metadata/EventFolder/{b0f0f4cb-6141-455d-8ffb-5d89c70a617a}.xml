@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{b0f0f4cb-6141-455d-8ffb-5d89c70a617a}">
+		<property name="name">
+			<value>Spawner Button</value>
+		</property>
+		<relationship name="folder">
+			<destination>{92fca5fa-aa95-48d3-ac2a-670da86d454a}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -5,6 +5,7 @@ public class MagnetSpawnerButton : MonoBehaviour, IInteractable
 {
     #region Inspector Objects
     //[Header("Object References")]
+    [SerializeField] private Animator animator;
 
     //[Header("Configuration Variables")]
 
@@ -16,6 +17,8 @@ public class MagnetSpawnerButton : MonoBehaviour, IInteractable
     public void OnInteract()
     {
         spawner.SpawnMagnet();
+        animator.Play("spawner_button_press");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Spawner Button/Spawner Press", transform.position);
     }
     void Start()
     {
