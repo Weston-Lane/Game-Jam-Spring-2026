@@ -10,15 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 00cb37d347da1ab42995c001280e5c00, type: 3}
       propertyPath: m_LocalScale.x
-      value: 114.14
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 00cb37d347da1ab42995c001280e5c00, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 114.14
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 00cb37d347da1ab42995c001280e5c00, type: 3}
       propertyPath: m_LocalScale.z
-      value: 114.14
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 00cb37d347da1ab42995c001280e5c00, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26,11 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 00cb37d347da1ab42995c001280e5c00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.057945
+      value: 0.006000012
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 00cb37d347da1ab42995c001280e5c00, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.4981
+      value: -2.491
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 00cb37d347da1ab42995c001280e5c00, type: 3}
       propertyPath: m_LocalRotation.w
@@ -98,7 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorController
   startPosition: 1
   doorSpeed: 2
-  doorOpenHeight: 0.85
+  doorOpenHeight: 1
 --- !u!64 &5369284258008866558
 MeshCollider:
   m_ObjectHideFlags: 0
