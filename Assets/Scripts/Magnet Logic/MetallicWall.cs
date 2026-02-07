@@ -52,7 +52,7 @@ public class MetallicWall : MonoBehaviour, IMetallic, IToggleable
     public void ToggleOff()
     {
         ToggleSources--;
-        if (ToggleSources > 0 || ToggleSources > numInputs) return;
+        if (ToggleSources >= numInputs) return;
 
         if (startPolarity == Polarity.North) 
             ChangePolarity(Polarity.North);
