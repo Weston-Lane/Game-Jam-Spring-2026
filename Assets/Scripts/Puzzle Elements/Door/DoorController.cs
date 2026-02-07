@@ -51,6 +51,8 @@ public class DoorController : MonoBehaviour, IToggleable
         
         targetPosition = openPosition;   
         doorTarget = 1;
+
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Door/Door Open", transform.position);
     }
 
     public void ToggleOff()
@@ -61,6 +63,7 @@ public class DoorController : MonoBehaviour, IToggleable
         targetPosition = closedPosition;
         doorTarget = 0;
         
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Door/Door Close", transform.position);
     }
 
     private void Update()
