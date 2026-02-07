@@ -15,8 +15,10 @@ public class MagnetPole : MonoBehaviour
     [SerializeField] public Polarity polarity;
     [SerializeField] float power = 2f;
     [SerializeField] float fieldRadius = 0.5f;
+    [SerializeField] public bool attractUncharged = false;
 
     //[Header("State")]
+
     #endregion
 
     private float emissionBoost = 0;
@@ -69,7 +71,13 @@ public class MagnetPole : MonoBehaviour
             }
             else
             //do nothing // Uncharged
-            { }
+            {
+                if(mp.attractUncharged)
+                {
+                    forceVector = (dirVector / (dist * dist)) * mp.power;
+                    PoleRb.AddForce(-forceVector); 
+                }
+            }
         }
 
         //Or is this a metallic object
