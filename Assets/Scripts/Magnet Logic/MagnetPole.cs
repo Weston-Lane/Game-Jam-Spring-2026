@@ -81,19 +81,27 @@ public class MagnetPole : MonoBehaviour
             Vector3 forceVector =
                 (dirVector / (dist * dist)) * power;
 
-            if (metallic.GetPolarity() == Polarity.Uncharged)
+            if (metallic.GetPolarity() == Polarity.Uncharged &&
+                (polarity == Polarity.North || polarity == Polarity.South))
+            //if magnet is charged but object is not
             {
                 PoleRb.AddForce(-forceVector);
             }
             else if (metallic.GetPolarity() == Polarity.North && polarity == Polarity.North || 
                      metallic.GetPolarity() == Polarity.South && polarity == Polarity.South)
+            //if magnet and object same
             {
                 PoleRb.AddForce(forceVector);
             }
-            else
+            else if (metallic.GetPolarity() == Polarity.North && polarity == Polarity.South ||
+                     metallic.GetPolarity() == Polarity.South && polarity == Polarity.North)
+            //if they are opposite
             {
                 PoleRb.AddForce(-forceVector);
             }
+            else
+            //both uncharged
+            { }
         }
         else
         {
