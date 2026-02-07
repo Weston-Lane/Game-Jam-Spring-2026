@@ -5,7 +5,7 @@ public class BaseMagnet : MonoBehaviour
     public enum Polarity{
         North,
         South,
-        Uncharged
+        Uncharged,
     }
 
     #region Inspector Objects

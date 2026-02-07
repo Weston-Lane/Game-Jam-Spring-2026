@@ -6,6 +6,7 @@ public class MetallicWall : MonoBehaviour, IMetallic, IToggleable
     [SerializeField] private Renderer renderer;
     [SerializeField] private Polarity startPolarity;
     [SerializeField] private Transform wallNormal;
+    [SerializeField] private int numInputs;
 
     private Polarity polarity;
 
@@ -37,6 +38,9 @@ public class MetallicWall : MonoBehaviour, IMetallic, IToggleable
     public void ToggleOn()
     {
         ToggleSources++; 
+        if(ToggleSources < numInputs)
+            { return; }
+
         if (startPolarity == Polarity.North) 
             ChangePolarity(Polarity.South);
         else
@@ -48,7 +52,7 @@ public class MetallicWall : MonoBehaviour, IMetallic, IToggleable
     public void ToggleOff()
     {
         ToggleSources--;
-        if (ToggleSources > 0) return;
+        if (ToggleSources > 0 || ToggleSources > numInputs) return;
 
         if (startPolarity == Polarity.North) 
             ChangePolarity(Polarity.North);

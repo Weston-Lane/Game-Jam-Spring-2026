@@ -3,12 +3,13 @@ using UnityEngine;
 public class ConveyorBelt : MonoBehaviour, IMetallic
 {
     [SerializeField] private float beltForce;
+    [SerializeField] private bool useMagnetForce = false;
     [SerializeField] private Transform forwardTransform;
     [SerializeField] private Transform beltNormal;
 
     public Vector3 GetNormal()
     {
-        return beltNormal.forward;
+        return useMagnetForce ? beltNormal.forward : Vector3.zero;
     }
 
     public BaseMagnet.Polarity GetPolarity()
