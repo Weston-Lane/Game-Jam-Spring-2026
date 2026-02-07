@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8659517786181407396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Door/Door Open
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Door/Door Open
+  Guid:
+    Data1: 1624527462
+    Data2: 1141781411
+    Data3: 7167408
+    Data4: 1526352466
+  Banks:
+  - {fileID: 7184465390633956352}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1584
 --- !u!114 &-4899615588502429737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,11 +69,38 @@ MonoBehaviour:
   Path: FMODProject/SpringGameJam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639060780074425702
+  lastModified: 639060795964445222
   FileSizes:
   - Name: Desktop
-    Value: 1052
+    Value: 1144
   Exists: 1
+--- !u!114 &-2504185655264297711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Door/Door Close
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Door/Door Close
+  Guid:
+    Data1: -1738771379
+    Data2: 1097318152
+    Data3: -868829023
+    Data4: 1496497365
+  Banks:
+  - {fileID: 7184465390633956352}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1050
 --- !u!114 &-2173287460241942873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +170,8 @@ MonoBehaviour:
   - {fileID: -4899615588502429737}
   - {fileID: 9027982338765540197}
   - {fileID: 6720692909186801514}
+  - {fileID: -8659517786181407396}
+  - {fileID: -2504185655264297711}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7184465390633956352}
@@ -123,7 +179,7 @@ MonoBehaviour:
   - {fileID: 7184465390633956352}
   - {fileID: -3603417354971248456}
   cacheVersion: 131858
-  cacheTime: 639060780074425702
+  cacheTime: 639060795964445222
   SerializableEventsDict:
   - key: event:/Button/Button Release
     index: 0
@@ -137,6 +193,10 @@ MonoBehaviour:
     index: 4
   - key: event:/Music/Main Theme
     index: 5
+  - key: event:/Door/Door Open
+    index: 6
+  - key: event:/Door/Door Close
+    index: 7
 --- !u!114 &1435298935184204049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,10 +313,10 @@ MonoBehaviour:
   Path: FMODProject/SpringGameJam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639060780074405701
+  lastModified: 639060795964425213
   FileSizes:
   - Name: Desktop
-    Value: 1141728
+    Value: 1178016
   Exists: 1
 --- !u!114 &9027982338765540197
 MonoBehaviour:

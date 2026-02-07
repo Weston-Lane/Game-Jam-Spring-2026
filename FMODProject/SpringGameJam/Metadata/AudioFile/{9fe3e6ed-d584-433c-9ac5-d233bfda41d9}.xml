@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9fe3e6ed-d584-433c-9ac5-d233bfda41d9}">
+		<property name="assetPath">
+			<value>Door/749682__audiopapkin__mechanical-sound-design-elements-robot-ps-001.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.7839999999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8ce54b46-84dc-47e9-a9b4-5989e80a571a}</destination>
+		</relationship>
+	</object>
+</objects>
