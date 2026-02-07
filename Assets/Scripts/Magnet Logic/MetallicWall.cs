@@ -55,7 +55,7 @@ public class MetallicWall : MonoBehaviour, IMetallic, IToggleable
         else
             ChangePolarity(Polarity.South);
 
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Magnets/Charge Magnet");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Magnets/Charge Magnet", transform.position);
     }
 
     public void ChangePolarity(Polarity polarity)
