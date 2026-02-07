@@ -65,7 +65,6 @@ public class DoorController : MonoBehaviour, IToggleable
 
     private void Update()
     {
-        // transform.position = MathHelpers.ExpDecay(transform.position, targetPosition, doorSpeed, Time.deltaTime);
         doorProgress = MathHelpers.ExpDecay(doorProgress, doorTarget, doorSpeed, Time.deltaTime);
         transform.position = Vector3.Lerp(closedPosition, openPosition, curve.Evaluate(doorProgress));
     }

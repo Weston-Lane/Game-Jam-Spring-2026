@@ -52,14 +52,14 @@ public class MetallicWall : MonoBehaviour, IMetallic, IToggleable
     public void ToggleOff()
     {
         ToggleSources--;
-        if (ToggleSources > 0 || ToggleSources > numInputs) return;
+        if (ToggleSources >= numInputs) return;
 
         if (startPolarity == Polarity.North) 
             ChangePolarity(Polarity.North);
         else
             ChangePolarity(Polarity.South);
 
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Magnets/Charge Magnet");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Magnets/Charge Magnet", transform.position);
     }
 
     public void ChangePolarity(Polarity polarity)

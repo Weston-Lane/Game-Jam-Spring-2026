@@ -3338,9 +3338,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4404826892045617229, guid: 86fe42516e28f3845897250a57c11c77, type: 3}
+      propertyPath: polarity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8231047908441585333, guid: 86fe42516e28f3845897250a57c11c77, type: 3}
       propertyPath: m_Name
       value: Puzzle 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561996213685123196, guid: 86fe42516e28f3845897250a57c11c77, type: 3}
+      propertyPath: polarity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
