@@ -618,11 +618,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
---- !u!1 &6890786094285816638 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1840289687380527284, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
-  m_PrefabInstance: {fileID: 5056127077896031114}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7597540776790217032 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3406159328340236994, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
@@ -834,6 +829,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3406159328340236994, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
   m_PrefabInstance: {fileID: 7295737495808089417}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8986281189769876989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1840289687380527284, guid: 8cc78314590589445b02c18fa35ede9d, type: 3}
+  m_PrefabInstance: {fileID: 7295737495808089417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8741255348570410513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -849,7 +849,7 @@ PrefabInstance:
     - target: {fileID: 2718273915357747213, guid: 7c59f3f90800975459c5bae525c0c979, type: 3}
       propertyPath: spawnerMagnet
       value: 
-      objectReference: {fileID: 6890786094285816638}
+      objectReference: {fileID: 8986281189769876989}
     - target: {fileID: 2823517696136487229, guid: 7c59f3f90800975459c5bae525c0c979, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.073
