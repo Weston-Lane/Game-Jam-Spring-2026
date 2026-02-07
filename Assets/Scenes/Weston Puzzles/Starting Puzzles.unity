@@ -3848,7 +3848,7 @@ Transform:
   m_GameObject: {fileID: 1917424892}
   serializedVersion: 2
   m_LocalRotation: {x: -0.017095985, y: -0.023994243, z: -0.0004104106, w: 0.99956584}
-  m_LocalPosition: {x: -1.44, y: -1.869, z: 32.289}
+  m_LocalPosition: {x: -0.83, y: -1.27, z: 19.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4722,6 +4722,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6698562199408743964, guid: e11679a707ad36947b8c6f6a10e8c141, type: 3}
+      propertyPath: spawnerMagnet
+      value: 
+      objectReference: {fileID: 8771408162570264880}
     - target: {fileID: 7632187011624865962, guid: e11679a707ad36947b8c6f6a10e8c141, type: 3}
       propertyPath: m_Name
       value: Puzzle 1
@@ -4731,6 +4735,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e11679a707ad36947b8c6f6a10e8c141, type: 3}
+--- !u!1 &8771408162570264880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8986281189769876989, guid: e11679a707ad36947b8c6f6a10e8c141, type: 3}
+  m_PrefabInstance: {fileID: 8771408162570264879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
