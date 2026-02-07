@@ -950,6 +950,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2886354118385969011, guid: 340b5868ccfaac841928bce4e867e79c, type: 3}
+      propertyPath: useMagnetForce
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4458959013532403900, guid: 340b5868ccfaac841928bce4e867e79c, type: 3}
       propertyPath: m_LocalScale.y
       value: 535.35
@@ -3102,6 +3106,10 @@ PrefabInstance:
       propertyPath: beltForce
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2886354118385969011, guid: 340b5868ccfaac841928bce4e867e79c, type: 3}
+      propertyPath: useMagnetForce
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4458959013532403900, guid: 340b5868ccfaac841928bce4e867e79c, type: 3}
       propertyPath: m_LocalScale.y
       value: 561.67
@@ -4362,6 +4370,10 @@ PrefabInstance:
       propertyPath: beltForce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2886354118385969011, guid: 340b5868ccfaac841928bce4e867e79c, type: 3}
+      propertyPath: useMagnetForce
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4458959013532403900, guid: 340b5868ccfaac841928bce4e867e79c, type: 3}
       propertyPath: m_LocalScale.y
       value: 561.67
@@ -4429,6 +4441,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2886354118385969011, guid: 340b5868ccfaac841928bce4e867e79c, type: 3}
       propertyPath: beltForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886354118385969011, guid: 340b5868ccfaac841928bce4e867e79c, type: 3}
+      propertyPath: useMagnetForce
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4458959013532403900, guid: 340b5868ccfaac841928bce4e867e79c, type: 3}
