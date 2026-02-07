@@ -69,10 +69,10 @@ MonoBehaviour:
   Path: FMODProject/SpringGameJam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639060795964445222
+  lastModified: 639060805308192565
   FileSizes:
   - Name: Desktop
-    Value: 1144
+    Value: 1192
   Exists: 1
 --- !u!114 &-2504185655264297711
 MonoBehaviour:
@@ -172,6 +172,7 @@ MonoBehaviour:
   - {fileID: 6720692909186801514}
   - {fileID: -8659517786181407396}
   - {fileID: -2504185655264297711}
+  - {fileID: 1695994650238454163}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7184465390633956352}
@@ -179,7 +180,7 @@ MonoBehaviour:
   - {fileID: 7184465390633956352}
   - {fileID: -3603417354971248456}
   cacheVersion: 131858
-  cacheTime: 639060795964445222
+  cacheTime: 639060805308192565
   SerializableEventsDict:
   - key: event:/Button/Button Release
     index: 0
@@ -197,6 +198,8 @@ MonoBehaviour:
     index: 6
   - key: event:/Door/Door Close
     index: 7
+  - key: event:/Chute/Chute Drop
+    index: 8
 --- !u!114 &1435298935184204049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +220,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 712
   Exists: 1
+--- !u!114 &1695994650238454163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Chute/Chute Drop
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Chute/Chute Drop
+  Guid:
+    Data1: -1290192013
+    Data2: 1176159325
+    Data3: 1555760055
+    Data4: -2085245579
+  Banks:
+  - {fileID: 7184465390633956352}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2200
 --- !u!114 &3178075390055795100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,10 +343,10 @@ MonoBehaviour:
   Path: FMODProject/SpringGameJam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639060795964425213
+  lastModified: 639060805308172581
   FileSizes:
   - Name: Desktop
-    Value: 1178016
+    Value: 1391136
   Exists: 1
 --- !u!114 &9027982338765540197
 MonoBehaviour:

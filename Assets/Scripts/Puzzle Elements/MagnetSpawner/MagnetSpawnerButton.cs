@@ -19,6 +19,7 @@ public class MagnetSpawnerButton : MonoBehaviour, IInteractable
         spawner.SpawnMagnet();
         animator.Play("spawner_button_press");
         FMODUnity.RuntimeManager.PlayOneShot("event:/Spawner Button/Spawner Press", transform.position);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Chute/Chute Drop", spawner.transform.position);
     }
     void Start()
     {

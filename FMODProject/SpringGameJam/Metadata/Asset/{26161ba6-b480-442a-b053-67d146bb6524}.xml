@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{26161ba6-b480-442a-b053-67d146bb6524}">
+		<property name="assetPath">
+			<value>Chute/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8ce54b46-84dc-47e9-a9b4-5989e80a571a}</destination>
+		</relationship>
+	</object>
+</objects>
