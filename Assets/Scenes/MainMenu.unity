@@ -2061,6 +2061,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1677847560000747523, guid: 06c7f03f03aab164d814d7955d3360d2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 35.4
+      objectReference: {fileID: 0}
     - target: {fileID: 2335486186954226134, guid: 06c7f03f03aab164d814d7955d3360d2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2107,7 +2111,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4209263298548621183, guid: 06c7f03f03aab164d814d7955d3360d2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -510.82
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209263298548621183, guid: 06c7f03f03aab164d814d7955d3360d2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -256.6
       objectReference: {fileID: 0}
     - target: {fileID: 4209263298548621183, guid: 06c7f03f03aab164d814d7955d3360d2, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -2233,6 +2241,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6868815186268684561, guid: 06c7f03f03aab164d814d7955d3360d2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 194.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7266722822667468627, guid: 06c7f03f03aab164d814d7955d3360d2, type: 3}
       propertyPath: m_Texture
       value: 
@@ -2346,7 +2358,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7577804905740784605, guid: 06c7f03f03aab164d814d7955d3360d2, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5450123930204765068, guid: 06c7f03f03aab164d814d7955d3360d2, type: 3}
       insertIndex: -1
